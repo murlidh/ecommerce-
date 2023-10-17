@@ -1,0 +1,65 @@
+.product-img {
+    width: 100%;
+    object-fit: contain;
+    height: 80%;
+}
+
+.product-color {
+    border: 2px solid #000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.product-details {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+h1,
+h5,
+h6 {
+    margin-bottom: 20px;
+}
+
+.form-button:hover {
+    opacity: 0.5;
+}
+
+.form-button {
+    height: 35px;
+    border: 1px solid black;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: orange;
+    font-weight: bold;
+    padding: 5px;
+    margin-right: 10px;
+    margin-bottom: 8px;
+}
+
+.product-details input {
+    width: 23px;
+    margin-left: 6px;
+    margin-right: 6px;
+
+}
+
+.increse-button {
+    border: 1px solid gray;
+    height: 28px;
+    width: 23px;
+
+}
+
+@media only screen and (max-width: 640px) and (min-width: 480px) {
+    .product-color {
+        margin-left: 250px;
+    }
+
+    .details {
+        text-align: center;
+
+    }
+}

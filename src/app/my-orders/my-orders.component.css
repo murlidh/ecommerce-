@@ -1,0 +1,36 @@
+.order-img{
+    width: 30px;
+    height: 30px;
+}
+h1{
+    text-align: center;
+}
+.my-orders{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px;
+}
+.row{
+    text-align: center;
+    margin-left: 1px;
+    margin-top: 20px;
+    width: 100%;
+    padding-bottom: 15px;
+    border-bottom: 3px solid powderblue;
+}
+.row2{
+    text-align: center;
+    margin-left: 1px;
+    margin-top: 20px;
+    width: 100%;
+    padding-bottom: 15px;
+    border-bottom: 3px solid powderblue;
+    display: flex;
+}
+.ordr{
+    border-top: 3px solid powderblue;
+    border-left: 3px solid powderblue;
+    border-right: 3px solid powderblue;
+
+}

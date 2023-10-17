@@ -1,0 +1,116 @@
+h1 a {
+    color: aqua;
+    text-decoration: none;
+}
+h1 a:hover{
+    color:orange
+  }
+    
+  ul li a:active{
+    color:red;
+  }
+
+.flex{
+    flex-wrap: wrap;
+}
+
+.nav {
+    display: flex;
+    background-color: #151425;
+    justify-content: space-between;
+
+
+    flex-wrap: wrap;
+    font-family: Franklin Gothic Medium;
+}
+
+.comm {
+    text-decoration: none;
+    color: white;
+}
+
+.comm:hover {
+    color: orange;
+}
+
+.main-nav {
+    display: flex;
+    margin-top: 3px;
+}
+
+.nav h1 {
+    font-size: 40px;
+    margin: 0;
+    color: blue;
+}
+
+.nav ul {
+    display: inline-flex;
+    list-style-type: none;
+    margin: 0;
+    margin-right: 10px;
+    padding: 0;
+    flex-wrap: wrap;
+
+}
+
+.nav li {
+    padding-left: 15px;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.nav li a:hover {
+    color: orange;
+}
+nav a :hover {
+    color: orange;
+}
+.nav input {
+    flex: 1;
+
+    /* border: 1px solid blue; */
+    height: 42px;
+    border-right: 0px;
+    width: 250px;
+    padding-top: 6px;
+
+}
+
+.nav button {
+    margin-bottom: 0px;
+    height: 43px;
+    font-size: 20px;
+    width: 102px;
+    color: white;
+    background-color: orange;
+}
+
+.suggested-result {
+
+    position: absolute;
+    display:grid !important;
+    z-index: 10;
+    background-color: #192b3a;
+    width: 288px;
+    top: 49px;
+
+
+}
+
+.suggested-result li {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.suggested-result li a {
+    cursor: pointer;
+    color: aliceblue;
+}

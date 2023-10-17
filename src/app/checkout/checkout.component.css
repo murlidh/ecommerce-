@@ -1,0 +1,39 @@
+.checkout h1{
+    text-align:center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.checkout h3{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.common-form{
+    text-align: center;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 300px;
+    padding-bottom: 25px;
+
+}
+.form-input{
+    height: 35px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border: 1px solid black;
+
+    color: blue;
+}
+.form-button{
+    height: 35px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    background-color: orange;
+
+}
+.worry{
+    margin-top: 10px;
+}
