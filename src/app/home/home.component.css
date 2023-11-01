@@ -34,6 +34,9 @@
     justify-content: space-between;
     padding: 10px;
 }
+.pagi{
+  text-align: right;
+}
 
 @media only screen and (max-width: 1024px) and (min-width: 480px) {
     .col-sm-3{
