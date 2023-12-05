@@ -1,11 +1,30 @@
+.headline{
+  font-size: 40px;
+  margin: 0;
+  position: relative;
+}
 h1 a {
-    color: aqua;
-    text-decoration: none;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  color: #fff;
+    font-size: 30px;
+    padding: 10px 10px 9px 10px;
+    bottom: 6px;
+}
+
+@keyframes example {
+  0%   { left:0px; top:0px;}
+  25%  { left:200px; top:0px;}
+  100% { left:0px; top:0px;}
 }
 h1 a:hover{
     color:orange
   }
-    
+
   ul li a:active{
     color:red;
   }
@@ -16,14 +35,14 @@ h1 a:hover{
 
 .nav {
     display: flex;
-    background-color: #151425;
+    background-color: #e96100fa;
     justify-content: space-between;
-
-
     flex-wrap: wrap;
     font-family: Franklin Gothic Medium;
 }
-
+.nav-search{
+  margin-top: 2px;
+}
 .comm {
     text-decoration: none;
     color: white;
@@ -74,23 +93,24 @@ nav a :hover {
     color: orange;
 }
 .nav input {
-    flex: 1;
-
-    /* border: 1px solid blue; */
-    height: 42px;
-    border-right: 0px;
-    width: 250px;
-    padding-top: 6px;
-
+  flex: 1;
+  height: 43px;
+  border-right: 0px;
+  width: 250px;
+  padding-top: 3px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px 0px 0px 5px;
 }
 
 .nav button {
-    margin-bottom: 0px;
-    height: 43px;
-    font-size: 20px;
-    width: 102px;
-    color: white;
+  margin-bottom: 0px;
+  height: 43px;
+  font-size: 20px;
+  width: 102px;
+  color: white;
     background-color: orange;
+    border: 1px solid orange;
+    border-radius: 0px 5px 5px 0px;
 }
 
 .suggested-result {
@@ -113,4 +133,20 @@ nav a :hover {
 .suggested-result li a {
     cursor: pointer;
     color: aliceblue;
+}
+.menu-list{
+  animation-duration: 3s;
+  animation-name: slidein;
+
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }

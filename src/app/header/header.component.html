@@ -1,5 +1,5 @@
 <nav class="nav">
-  <h1><a routerLink="">E-Comm</a> </h1>
+  <h1 class="headline"><a routerLink="">E-Comm</a> </h1>
   <div *ngIf="menuType!=='seller'" class="nav-search">
     <input type="text"
     #searchInput
@@ -12,7 +12,7 @@
     </ul>
   </div>
  <div [ngSwitch]="menuType">
-  <ul *ngSwitchCase="'default'" class="flex">
+  <ul *ngSwitchCase="'default'" class="flex menu-list">
     <li><a routerLink="seller-auth">Seller</a></li>
     <li><a routerLink="">Home</a></li>
     <li><a routerLink="user-auth">Login/Sign-up</a></li>

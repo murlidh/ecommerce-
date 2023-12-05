@@ -59,6 +59,12 @@
       "password": "abc@123",
       "email": "sam@seller.com",
       "id": 13
+    },
+    {
+      "name": "main",
+      "email": "main@seller.com",
+      "password": "abc@123",
+      "id": 14
     }
   ],
   "products": [
