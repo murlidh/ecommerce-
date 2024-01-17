@@ -11,9 +11,10 @@ import { ProductService } from '../services/product.service';
 export class HomeComponent implements OnInit {
  popularProducts:undefined|product[];
  trendyProducts: any;
- page: number = 1;
-  itemsPerPage = 10;
+ page: number = 5;
   totalItems : any;
+  currentPage: number = 1;
+  itemsPerPage: number = 5;
 
 
   constructor(private product:ProductService) {}
@@ -30,10 +31,10 @@ export class HomeComponent implements OnInit {
       this.page =  0
     })
   }
-  gty(page: any){
-    this.product.trendyProducts().subscribe((data: any) => {
-      this.trendyProducts =  data.data;
-      this.totalItems = data.totalPassengers;
-    })
-  }
+  calculateIndices(totalItems: number): { startIndex: number; endIndex: number } {
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+    const endIndex = Math.min(startIndex + this.itemsPerPage - 1, totalItems - 1);
+    return { startIndex, endIndex };
+
+}
 }
