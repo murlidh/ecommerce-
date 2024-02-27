@@ -1,18 +1,30 @@
 <ngb-carousel *ngIf="popularProducts">
-  hello
-    <ng-template  *ngFor="let item of popularProducts" ngbSlide>
-      <div class="picsum-img-wrapper">
-        <a routerLink="/details/{{item.id}}"> <img class="product-header-image" src="{{item.image}}" alt="Random first slide">
-     </a>
-        </div>
-      <div class="carousel-caption">
-        <h3>{{item.name}}</h3>
-        <p>{{item.description}}</p>
+  <ng-template  *ngFor="let item of popularProducts" ngbSlide>
+    <div class="picsum-img-wrapper">
+      <a routerLink="/details/{{item.id}}"> <img class="product-header-image" src="{{item.image}}" alt="Random first slide">
+   </a>
       </div>
-    </ng-template>
-  </ngb-carousel>
+    <div class="carousel-caption">
+      <h3>{{item.name}}</h3>
+      <p>{{item.description}}</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
 <div class="product-list-wrapper">
-<h1>Trendy Products</h1>
+<div class="icons">
+<h1 class="heading-icon">{{title2}}</h1>
+<div>
+<button (click)="toggleView('grid')" [class.active]="isGridView">
+  <i class="fa fa-th"></i>
+ </button>
+ <button (click)="toggleView('list')" [class.active]="!isGridView">
+   <i class="fa fa-list"></i>
+ </button>
+</div>
+</div>
+
+<ng-container *ngIf="isGridView">
 <div class="row">
   <div class="col-sm-3" *ngFor="let item of trendyProducts | paginate
   : {
@@ -32,15 +44,44 @@
       </div>
     </div>
     <div class="product-footer">
-      <a style="text-decoration: none;">View Details</a>
+      <a style="text-decoration: none;" >View Details</a>
       <a style="text-decoration: none;" >Add to Cart</a>
     </div>
     </div>
   </div>
 </div>
+</ng-container>
+<ng-container *ngIf="!isGridView">
+<div>
+  <!-- Table View -->
+  <table class="product-table">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Color</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of trendyProducts">
+        <td><img class="list-img" src="{{item.image}}" alt=""></td>
+        <td>{{item.name}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.color}}</td>
+        <td>
+          <button><a style="text-decoration: none;" routerLink="/details/{{item.id}}">View Details</a></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</ng-container>
 <pagination-controls
-  class="pagi"
-  (pageChange)="calculateIndices((page = $event))"
+class="pagi"
+(pageChange)="calculateIndices((page = $event))"
 ></pagination-controls>
 
 </div>

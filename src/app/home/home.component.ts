@@ -15,6 +15,9 @@ export class HomeComponent implements OnInit {
   totalItems : any;
   currentPage: number = 1;
   itemsPerPage: number = 5;
+  isGridView: boolean = true;
+  title2="Trendy Products"
+
 
 
   constructor(private product:ProductService) {}
@@ -36,5 +39,8 @@ export class HomeComponent implements OnInit {
     const endIndex = Math.min(startIndex + this.itemsPerPage - 1, totalItems - 1);
     return { startIndex, endIndex };
 
+}
+toggleView(viewMode: 'grid' | 'list') {
+  this.isGridView = viewMode === 'grid';
 }
 }
