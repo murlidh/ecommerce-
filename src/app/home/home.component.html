@@ -50,9 +50,13 @@
     </div>
   </div>
 </div>
+<pagination-controls
+class="pagi"
+(pageChange)="calculateIndices((page = $event))"
+></pagination-controls>
 </ng-container>
 <ng-container *ngIf="!isGridView">
-<div>
+<div style="padding-bottom: 20px;">
   <!-- Table View -->
   <table class="product-table">
     <thead>
@@ -65,7 +69,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of trendyProducts">
+      <tr *ngFor="let item of trendyProducts | paginate: { itemsPerPage: 7, currentPage: currentPage, totalItems: trendyProducts.length }">
         <td><img class="list-img" src="{{item.image}}" alt=""></td>
         <td>{{item.name}}</td>
         <td>{{item.price}}</td>
@@ -76,13 +80,17 @@
       </tr>
     </tbody>
   </table>
-</div>
 
-</ng-container>
+</div>
 <pagination-controls
 class="pagi"
-(pageChange)="calculateIndices((page = $event))"
-></pagination-controls>
+(pageChange)="currentPage = $event"
+previousLabel="Previous"
+nextLabel="Next"
+(pageChange)="calculateIndices(trendyProducts.length)">
+</pagination-controls>
+</ng-container>
+
 
 </div>
 

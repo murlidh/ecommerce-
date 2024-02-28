@@ -11,7 +11,7 @@ import { ProductService } from '../services/product.service';
 export class HomeComponent implements OnInit {
  popularProducts:undefined|product[];
  trendyProducts: any;
- page: number = 5;
+ page: number = 10;
   totalItems : any;
   currentPage: number = 1;
   itemsPerPage: number = 5;
@@ -42,5 +42,6 @@ export class HomeComponent implements OnInit {
 }
 toggleView(viewMode: 'grid' | 'list') {
   this.isGridView = viewMode === 'grid';
+  this.page =  0
 }
 }
